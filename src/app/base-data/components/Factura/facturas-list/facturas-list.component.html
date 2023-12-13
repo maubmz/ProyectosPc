@@ -1,0 +1,21 @@
+<div class="card my-5">
+  <div class="card-body">
+    <table class="table table-bordered table-striped">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Factura Fecha</th>
+          <th scope="col">Productos</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let factura of facturas">
+          <td >{{ factura.facturaId }}</td>
+          <td>{{ factura.fechaCompra }}</td>
+          <td><a [routerLink]="['/producto/productosFindBy/', factura.facturaId]">Productos</a></td>
+        </tr>
+      </tbody>
+    </table>
+    <a routerLink="/cliente"  class="btn btn-info">Regresar a Clientes</a>
+  </div>
+</div>
