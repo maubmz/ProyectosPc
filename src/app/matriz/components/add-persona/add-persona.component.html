@@ -1,0 +1,25 @@
+<h4>Agregar Matriz de Personas</h4>
+<form (ngSubmit)="emitePersonaje()">
+  <input type="text"
+  [(ngModel)]="persona.nombre"
+  name="nombre"
+  placeholder="Nombre">
+  <br>
+
+  <input type="number"
+  [(ngModel)]="persona.edad"
+  name="edad"
+  placeholder="Edad">
+  <br>
+
+  <input type="number"
+  [(ngModel)]="persona.estatura"
+  name="persona.estatura"
+  placeholder="Estatura">
+  <br>
+
+  <button type="submit">
+    Agregar Persona
+  </button>
+
+</form>

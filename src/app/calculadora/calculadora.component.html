@@ -1,0 +1,30 @@
+<h1>Calculadora</h1>
+
+<div class="calculadora">
+
+  <div class="textResultado">
+    <input type="text" [value]="resultado">
+  </div>
+
+  <div class="botonNumeros">
+    <button (click)="getInputValue(1)"> 1 </button>
+    <button (click)="getInputValue(2)"> 2 </button>
+    <button (click)="getInputValue(3)"> 3 </button>
+    <button (click)="getInputValue('+')"> + </button>
+
+    <button (click)="getInputValue(4)"> 4 </button>
+    <button (click)="getInputValue(1)"> 5 </button>
+    <button (click)="getInputValue(6)"> 6 </button>
+    <button (click)="getInputValue('-')"> - </button>
+
+    <button (click)="getInputValue(7)"> 7 </button>
+    <button (click)="getInputValue(8)"> 8 </button>
+    <button (click)="getInputValue(9)"> 9 </button>
+    <button (click)="getInputValue('-')"> / </button>
+
+    <button (click)="getInputValue(0)"> 0 </button>
+    <button (click)="getInputValue('*')"> * </button>
+    <button (click)="getInputValue('=')"> = </button>
+    <button (click)="borrar()"> DEL </button>
+  </div>
+</div>
