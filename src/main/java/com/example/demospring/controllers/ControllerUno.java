@@ -1,0 +1,12 @@
+package com.example.demospring.controllers;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class ControllerUno {
+    @GetMapping("/Saludo")
+    public String metodoSaludo(){
+        return "Hola Mundo";
+    }
+}
