@@ -7,13 +7,10 @@ const color2 = Color.fromARGB(255, 45, 7, 98);
 
 void main() {
   runApp(
-    MaterialApp(
-      home: Scaffold(
-        body: GradientContainer(
-          color1, 
-          color2
-        )
-      ),
+    const MaterialApp(
+      home: Scaffold(body: GradientContainer.purple()),
+      // se puede ingresar el constructo con argumentos o sin argumentos como el constructor con argumentos
+      // GradientContainer(color1, color2) o GradientContainer.purple()
     ),
   );
 }
