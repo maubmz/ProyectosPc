@@ -1,7 +1,5 @@
-from Metodos.Arreglos import generador_arreglos, encuentra_numero
 from Tarea1.Genera_Grafica import generador_grafica
-from Tarea1.Genera_Tabla import generador_tabla
-from Tarea1.MetodoBurbuja import burbuja
+from PythonEscuela.QuintoSemestre.Tarea1.Genera_Tabla import generador_tabla
 
 if __name__ == '__main__':
     '''
