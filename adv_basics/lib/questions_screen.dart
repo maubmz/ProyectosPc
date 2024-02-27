@@ -4,6 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:adv_basics/answer_button.dart';
 import 'package:adv_basics/data/questions.dart';
 
+// Pagina donde se realiza la interfaz de las preguntas
 class QuestionsScreen extends StatefulWidget {
   const QuestionsScreen({
     super.key,
@@ -58,7 +59,7 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
                   answerText: answer,
                   onTap: () {
                     answerQuestion(answer);
-                  },
+                  },                  
                 );
               },
             ),
