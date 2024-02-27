@@ -23,7 +23,7 @@ class SummaryItem extends StatelessWidget {
         const SizedBox(width: 20),
         Expanded(
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center, // Cambia esta línea
             children: [
               Text(
                 itemData['question'] as String,
