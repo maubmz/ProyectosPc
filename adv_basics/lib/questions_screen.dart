@@ -21,7 +21,8 @@ class QuestionsScreen extends StatefulWidget {
 
 class _QuestionsScreenState extends State<QuestionsScreen> {
   var currentQuestionIndex = 0;
-
+  
+  // Aumenta el valor de la variable por cada vez que se llama la funcion
   void answerQuestion(String selectedAnswers) {
     widget.onSelectAnswer(selectedAnswers);
     // currentQuestionIndex = currentQuestionIndex + 1;
@@ -53,6 +54,7 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
               textAlign: TextAlign.center,
             ),
             const SizedBox(height: 30),
+            //Crea una lista, mapeando las respuestas de la pregunta
             ...currentQuestion.getShuffledAnswers().map(
               (answer) {
                 return AnswerButton(

@@ -4,6 +4,7 @@ import 'package:adv_basics/questions_summary/questions_summary.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+// Interfaz de resultados del cuestionario
 class ResultScreen extends StatelessWidget {
   const ResultScreen({
     super.key,
@@ -11,6 +12,7 @@ class ResultScreen extends StatelessWidget {
     required this.onRestart
   });
 
+  // Guardan las respuestas del usuario y la funcion de regresar a la pantalla de inicio
   final void Function() onRestart;
   final List<String> chosenAnswers;
 

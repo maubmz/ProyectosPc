@@ -7,14 +7,15 @@ class AnswerButton extends StatelessWidget {
     required this.answerText,
     required this.onTap,
   });
-
+  
+  //Las variablaes almacenan el texto de la respuesta y la funcion que incrementa el contador de las preguntas
   final String answerText;
   final void Function() onTap;
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(7), // Ajusta el valor a tu necesidad
+      padding: const EdgeInsets.all(7), // Ajusta el valor de espacio entre cada boton
       child: ElevatedButton(
         onPressed: onTap,
         style: ElevatedButton.styleFrom(
