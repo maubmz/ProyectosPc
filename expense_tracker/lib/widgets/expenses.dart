@@ -14,7 +14,7 @@ class Expenses extends StatefulWidget {
 }
 
 class _Expenses extends State<Expenses> {
-  // Lista inicial de 
+  // Lista inicial de
   final List<Expense> _registeredExpenses = [
     Expense(
       title: 'Flutter Course',
@@ -30,9 +30,25 @@ class _Expenses extends State<Expenses> {
     ),
   ];
 
+  void _openAddExpenseOverlay() {
+    showModalBottomSheet(
+      context: context,
+      builder: (ctx) => const Text('Modal bottom sheeet'),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: const Text('Flutter ExpenseTracker'),
+        actions: [
+          IconButton(
+            onPressed: _openAddExpenseOverlay,
+            icon: const Icon(Icons.add),
+          ),
+        ],
+      ),
       body: Column(
         children: [
           const Text('The chart'),
