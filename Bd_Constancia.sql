@@ -1,12 +1,10 @@
-CREATE SCHEMA sistemas_informacion;
-
-use sistemas_informacion;
-
-
 create table constancia(
 	id_constancia INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     fecha VARCHAR(10) NOT NULL,
-	titulo VARCHAR(30) NOT NULL
+	titulo VARCHAR(30) NOT NULL,
+    no_cuenta1 INT NOT NULL,
+    
+    FOREIGN KEY (no_cuenta1) references estudiante(no_Cuenta)
 );
 
 create table estudiante (
@@ -16,16 +14,7 @@ create table estudiante (
     correo VARCHAR(25) NOT NULL
 );
 
-create table estudiante_constancia(
-	no_cuenta INTEGER NOT NULL,
-    id_constancia INTEGER NOT NULL,
-    
-    FOREIGN KEY (no_cuenta) REFERENCES estudiante(no_cuenta),
-    FOREIGN KEY (id_constancia) REFERENCES constancia(id_constancia)
-);
+select * from estudiante;
 
-SELECT * FROM constancia;
+select * from constancia;
 
-SELECT * FROM estudiante;
-
-SELECT * FROM estudiante_constancia;

@@ -27,20 +27,12 @@ public class Estudiante {
     @Column(name = "correo", nullable = false)
     private String correo;
 
-    @ManyToMany(
-            cascade = CascadeType.ALL
+    @OneToMany(
+            mappedBy = "estudiante",
+            cascade = CascadeType.ALL,
+            fetch = FetchType.LAZY
     )
-    @JoinTable(
-            name = "estudiante_constancia",
-            joinColumns = @JoinColumn(
-                    name = "no_cuenta",
-                    referencedColumnName = "no_cuenta"
-            ),
-            inverseJoinColumns = @JoinColumn(
-                    name = "id_constancia",
-                    referencedColumnName = "id_constancia"
-            )
-    )
-    private List<Constancia> constancias = new ArrayList<>();
+    @JsonManagedReference
+    private List<Constancia> constancias;
 
 }
