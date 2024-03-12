@@ -1,0 +1,35 @@
+<h1 class="text-center mb-4">Generador de QR de Conferencias</h1>
+<h3 class="text-center mb-4">Con el QR podrás obtener tu constancia</h3>
+<div class="container">
+  <!-- Lista de estudiantes -->
+  <ul *ngFor="let estudiante of estudiantes" class="list-group mb-3">
+    <li class="list-group-item bg-primary text-white">
+      <!-- Contenido de los estudiantes -->
+      <h4 class="mb-3">Estudiante</h4>
+      <div class="bg-lightgreen text-dark p-2 mb-2">
+        <div class="bg-success text-white p-2 mb-2"><strong>No. de Cuenta:</strong> {{ estudiante.noCuenta }}</div>
+        <div class="bg-success text-white p-2 mb-2"><strong>Nombre:</strong> {{ estudiante.nombre }}</div>
+        <div class="bg-success text-white p-2 mb-2"><strong>Apellidos:</strong> {{ estudiante.apellidos }}</div>
+        <div class="bg-success text-white p-2 mb-2"><strong>Correo:</strong> {{ estudiante.correo }}</div>
+      </div>
+      <h5 class="mt-3">Conferencias</h5>
+      <ul class="list-group">
+        <li *ngFor="let constancia of estudiante.constancias" class="list-group-item bg-secondary">
+          <!-- Contenido de las constancias -->
+          <p><strong>ID:</strong> {{ constancia.idConstancia }}</p>
+          <p><strong>Fecha:</strong> {{ constancia.fecha | date }}</p>
+          <p><strong>Título:</strong> {{ constancia.titulo }}</p>
+        </li>
+      </ul>
+
+      <br>
+      <!-- Botón para generar código QR -->
+      <button class="btn btn-success" (click)="generateQrCode(estudiante)">Generar Código QR</button>
+
+      <!-- Mostrar código QR generado -->
+      <div *ngIf="qrCodeUrl">
+        <img [src]="qrCodeUrl" alt="Código QR">
+      </div>
+    </li>
+  </ul>
+</div>
