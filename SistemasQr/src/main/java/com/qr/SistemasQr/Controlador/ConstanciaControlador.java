@@ -8,6 +8,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 
 @RequestMapping(value = "/constancia")
 @RestController
@@ -30,6 +32,11 @@ public class ConstanciaControlador {
     public void addConstancia(@RequestBody Constancia constancia) {
         constanciaRepositorio.save(constancia);
         System.out.println("constancia = " + constancia);
+    }
+
+    @GetMapping("/all")
+    public List<Constancia> obtenerTodasLasConstancias() {
+        return constanciaRepositorio.findAll();
     }
 
 }
